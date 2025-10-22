@@ -1,5 +1,6 @@
 import {Console} from "@woowacourse/mission-utils";
 import {getRandomNumber} from "./getRandomNumber.js";
+import {EXECUTE_RESULT} from "../constants/consoleConstants.js";
 
 export function handleResult(carNames, trialCount) {
   const racingCars = carNames.map(name => ({
@@ -7,7 +8,7 @@ export function handleResult(carNames, trialCount) {
     position: 0,
   }));
 
-  Console.print('실행 결과\n');
+  Console.print(EXECUTE_RESULT);
 
   for (let i = 0; i < trialCount; i++) {
     racingCars.forEach(car => {

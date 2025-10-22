@@ -1,4 +1,3 @@
-import {Console} from "@woowacourse/mission-utils";
 import {handleInputCarName} from "./utils/handleInputCarName.js";
 import {handleTrialCount} from "./utils/handleTrialCount.js";
 import {handleResult} from "./utils/handleResult.js";
