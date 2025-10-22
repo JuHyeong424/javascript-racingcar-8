@@ -7,8 +7,7 @@ class App {
   async run() {
     const carNames = await handleInputCarName();
     const trialCount = await handleTrialCount();
-    Console.print(`${carNames}, ${trialCount}`);
-    await handleResult(carNames, trialCount);
+    handleResult(carNames, trialCount);
   }
 }
 
