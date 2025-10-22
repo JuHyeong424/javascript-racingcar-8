@@ -24,4 +24,6 @@ export function handleResult(carNames, trialCount) {
 
     Console.print('');
   }
+
+  return racingCars;
 }
