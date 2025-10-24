@@ -46,7 +46,7 @@ describe("자동차 경주 - 기능 테스트", () => {
   test("공동 우승자가 발생하는 경우", async () => {
     const MOVING_FORWARD = 4;
     const inputs = ["pobi,woni", "1"];
-    const logs = ["pobi : -", "woni : -", "최종 우승자 : pobi,woni"];
+    const logs = ["pobi : -", "woni : -", "최종 우승자 : pobi, woni"];
     const logSpy = getLogSpy();
 
     mockQuestions(inputs);
@@ -87,7 +87,7 @@ describe("자동차 경주 - 기능 테스트", () => {
   test("모든 자동차가 움직이지 않는 경우", async () => {
     const STOP = 3;
     const inputs = ["pobi,woni,jun", "1"];
-    const logs = ["pobi : ", "woni : ", "jun : ", "최종 우승자 : pobi,woni,jun"];
+    const logs = ["pobi : ", "woni : ", "jun : ", "최종 우승자 : pobi, woni, jun"];
     const logSpy = getLogSpy();
 
     mockQuestions(inputs);
