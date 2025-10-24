@@ -4,6 +4,7 @@ export const ERROR_MESSAGE = {
   DUPLICATE_CAR_NAME: '[ERROR] 자동차 이름이 중복되어 있습니다.',
 
   EMPTY_TRIAL_COUNT: '[ERROR] 시도 횟수에 숫자를 작성해 주세요.',
+  NOT_INTEGER_TRIAL_COUNT: '[ERROR] 시도 횟수를 정수로 작성해 주세요.',
   ZERO_TRIAL_COUNT: '[ERROR] 시도 횟수가 0 입니다. 1 이상의 정수를 입력해 주세요.',
   MINUS_TRIAL_COUNT: '[ERROR] 시도 횟수가 음수 입니다. 1 이상의 정수를 입력해 주세요.',
 }

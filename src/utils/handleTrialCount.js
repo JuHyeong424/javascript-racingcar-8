@@ -10,6 +10,10 @@ export async function handleTrialCount() {
     throw new Error(ERROR_MESSAGE.EMPTY_TRIAL_COUNT);
   }
 
+  if (!Number.isInteger(numericTrialCount)) {
+    throw new Error(ERROR_MESSAGE.NOT_INTEGER_TRIAL_COUNT);
+  }
+
   if (numericTrialCount === 0) {
     throw new Error(ERROR_MESSAGE.ZERO_TRIAL_COUNT);
   }
