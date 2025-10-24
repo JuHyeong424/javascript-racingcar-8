@@ -8,5 +8,7 @@ export function handleWinner(racingResult) {
     .filter(car => car.position === maxPosition)
     .map(car => car.name);
 
-  Console.print(`${FINAL_WINNER} ${winners}`);
+  const winnerNames = winners.join(', ');
+
+  Console.print(`${FINAL_WINNER} ${winnerNames}`);
 }
