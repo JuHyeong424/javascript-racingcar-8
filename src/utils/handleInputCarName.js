@@ -8,7 +8,7 @@ export async function handleInputCarName () {
   const carNamesSet = new Set(carNames);
 
   carNames.forEach(car => {
-    if (car.length === 0 ) {
+    if (car.length === 0) {
       throw new Error(ERROR_MESSAGE.EMPTY_CAR_NAME);
     }
 
