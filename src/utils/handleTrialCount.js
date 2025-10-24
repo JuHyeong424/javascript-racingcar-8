@@ -4,6 +4,11 @@ import {ERROR_MESSAGE} from "../constants/errorConstants.js";
 
 export async function handleTrialCount() {
   const trialCount = await Console.readLineAsync(TRIAL_COUNT);
+
+  if (trialCount.trim() === '') {
+    throw new Error(ERROR_MESSAGE.EMPTY_TRIAL_COUNT);
+  }
+
   const numericTrialCount  = Number(trialCount);
 
   if (isNaN(numericTrialCount)) {
