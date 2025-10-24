@@ -10,13 +10,12 @@ export async function handleTrialCount() {
     throw new Error(ERROR_MESSAGE.EMPTY_TRIAL_COUNT);
   }
 
-  if (!isNaN(numericTrialCount)) {
-    if (numericTrialCount  === 0) {
-      throw new Error(ERROR_MESSAGE.ZERO_TRIAL_COUNT);
-    }
-    if (!isNaN(numericTrialCount) && numericTrialCount  < 0) {
-      throw new Error(ERROR_MESSAGE.MINUS_TRIAL_COUNT);
-    }
+  if (numericTrialCount === 0) {
+    throw new Error(ERROR_MESSAGE.ZERO_TRIAL_COUNT);
+  }
+
+  if (numericTrialCount < 0) {
+    throw new Error(ERROR_MESSAGE.MINUS_TRIAL_COUNT);
   }
 
   return numericTrialCount ;
