@@ -7,8 +7,8 @@ class App {
   async run() {
     const carNames = await handleInputCarName();
     const trialCount = await handleTrialCount();
-    const racingResult = await handleResult(carNames, trialCount);
-    await handleWinner(racingResult);
+    const racingResult = handleResult(carNames, trialCount);
+    handleWinner(racingResult);
   }
 }
 
