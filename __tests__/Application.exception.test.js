@@ -48,6 +48,15 @@ describe("자동차 경주 - 예외 테스트", () => {
     await expect(app.run()).rejects.toThrow(ERROR_MESSAGE.EMPTY_TRIAL_COUNT);
   });
 
+  test("시도 횟수에 정수가 아닌 값을 입력한 경우 에러를 발생시킨다", async () => {
+    const inputs = ["pobi,woni", "1.1"];
+    mockQuestions(inputs);
+
+    const app = new App();
+
+    await expect(app.run()).rejects.toThrow(ERROR_MESSAGE.NOT_INTEGER_TRIAL_COUNT);
+  });
+
   test("시도 횟수에 0을 입력한 경우 에러를 발생시킨다", async () => {
     const inputs = ["pobi,woni", "0"];
     mockQuestions(inputs);
